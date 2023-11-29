@@ -71,7 +71,9 @@ os.makedirs(chemin_dossier, exist_ok=True)
 # Enregistrement JSON
 statistiques = {
     "pronoms_comptes": {pron: occurrences_mots[pron] for pron in
-                        ["je", "tu", "il", "elle", "nous", "vous", "ils", "elles"]},
+                        ["je", "tu", "il", "elle", "nous", "vous", "ils", "elles",
+                         "me", "te", "se", "nous", "vous", "le", "la", "les", "lui", "leur",
+                         "moi", "toi", "soi", "nous", "vous", "eux", "elles"]},
     "e_compte_total": occurrences_mots['e']
 }
 
@@ -84,6 +86,8 @@ print("Mot le plus utilisé dans le texte:", mot_max_occurrence)
 
 # Mot le plus utilisé (hors pronoms)
 mots_non_pronoms = [mot for mot in occurrences_mots if
-                    mot not in ["je", "tu", "il", "elle", "nous", "vous", "ils", "elles"]]
+                    mot not in ["je", "tu", "il", "elle", "nous", "vous", "ils", "elles",
+                                "me", "te", "se", "nous", "vous", "le", "la", "les", "lui", "leur",
+                                "moi", "toi", "soi", "nous", "vous", "eux", "elles"]]
 mot_max_occurrence_non_pronoms = max(mots_non_pronoms, key=occurrences_mots.get)
 print("Mot le plus utilisé (hors pronoms) dans le texte:", mot_max_occurrence_non_pronoms)
