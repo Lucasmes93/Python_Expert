@@ -1,3 +1,5 @@
+# Iles YAZI; Ludwig DINSPEL; Luca MESSIA DOLIVEUX; Gregoire LEROGNON; Arthur DEUMENI TSAKO - Paris E4 WMD
+
 import json
 import os
 from collections import Counter
