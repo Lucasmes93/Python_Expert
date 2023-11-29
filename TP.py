@@ -89,7 +89,8 @@ statistiques = {
                          "tout", "tous", "toute", "toutes",
                          "chacun", "chacune",
                          "plusieurs",
-                         "certains", "certaines"]},
+                         "certains", "certaines",
+                         "m'", "t'", "s'", "l'", "y", "en"]},
     "e_compte_total": occurrences_mots['e']
 }
 
@@ -120,6 +121,7 @@ mots_non_pronoms = [mot for mot in occurrences_mots if
                                 "tout", "tous", "toute", "toutes",
                                 "chacun", "chacune",
                                 "plusieurs",
-                                "certains", "certaines"]]
+                                "certains", "certaines",
+                                "m'", "t'", "s'", "l'", "y", "en"]]
 mot_max_occurrence_non_pronoms = max(mots_non_pronoms, key=occurrences_mots.get)
 print("Mot le plus utilisé (hors pronoms) dans le texte:", mot_max_occurrence_non_pronoms)
