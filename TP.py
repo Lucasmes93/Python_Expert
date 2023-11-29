@@ -60,7 +60,7 @@ print("\nTexte sans 'e':\n", texte_sans_e)
 # Compter les occurrences de chaque mot
 occurrences_mots = Counter(texte_source.lower().split())
 
-chemin_dossier = r"C:\Users\MESSIA\Desktop\ESTIAM\E4\Python_Expert\TP_01"
+chemin_dossier = r"C:\Users\MESSIA\Desktop\ESTIAM\E4\Python_Expert"
 chemin_fichier_json = os.path.join(chemin_dossier, "fichiers.json")
 
 # Vérifier si le dossier existe, sinon le créer
@@ -68,7 +68,8 @@ os.makedirs(chemin_dossier, exist_ok=True)
 
 # Enregistrement JSON
 statistiques = {
-    "pronoms_comptes": {pron: occurrences_mots[pron] for pron in ["je", "tu", "il", "elle", "nous", "vous", "ils", "elles"]},
+    "pronoms_comptes": {pron: occurrences_mots[pron] for pron in
+                        ["je", "tu", "il", "elle", "nous", "vous", "ils", "elles"]},
     "e_compte_total": occurrences_mots['e']
 }
 
@@ -80,6 +81,7 @@ mot_max_occurrence = max(occurrences_mots, key=occurrences_mots.get)
 print("Mot le plus utilisé dans le texte:", mot_max_occurrence)
 
 # Mot le plus utilisé (hors pronoms)
-mots_non_pronoms = [mot for mot in occurrences_mots if mot not in ["je", "tu", "il", "elle", "nous", "vous", "ils", "elles"]]
+mots_non_pronoms = [mot for mot in occurrences_mots if
+                    mot not in ["je", "tu", "il", "elle", "nous", "vous", "ils", "elles"]]
 mot_max_occurrence_non_pronoms = max(mots_non_pronoms, key=occurrences_mots.get)
 print("Mot le plus utilisé (hors pronoms) dans le texte:", mot_max_occurrence_non_pronoms)
