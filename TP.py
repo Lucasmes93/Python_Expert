@@ -71,9 +71,25 @@ os.makedirs(chemin_dossier, exist_ok=True)
 # Enregistrement JSON
 statistiques = {
     "pronoms_comptes": {pron: occurrences_mots[pron] for pron in
-                        ["je", "tu", "il", "elle", "nous", "vous", "ils", "elles",
+                        ["je", "tu", "il", "elle", "on", "nous", "vous", "ils", "elles",
                          "me", "te", "se", "nous", "vous", "le", "la", "les", "lui", "leur",
-                         "moi", "toi", "soi", "nous", "vous", "eux", "elles"]},
+                         "moi", "toi", "soi", "nous", "vous", "eux", "elles",
+                         "ce", "cet", "cette", "ces",
+                         "le mien", "la mienne", "les miens", "les miennes",
+                         "le tien", "la tienne", "les tiens", "les tiennes",
+                         "le sien", "la sienne", "les siens", "les siennes",
+                         "le nôtre", "la nôtre", "les nôtres",
+                         "le vôtre", "la vôtre", "les vôtres",
+                         "le leur", "la leur", "les leurs",
+                         "celui", "celle", "ceux", "celles",
+                         "qui", "que", "quoi", "dont", "où",
+                         "quel", "quelle", "quels", "quelles",
+                         "quelque chose", "quelqu'un",
+                         "rien", "personne",
+                         "tout", "tous", "toute", "toutes",
+                         "chacun", "chacune",
+                         "plusieurs",
+                         "certains", "certaines"]},
     "e_compte_total": occurrences_mots['e']
 }
 
@@ -86,8 +102,24 @@ print("Mot le plus utilisé dans le texte:", mot_max_occurrence)
 
 # Mot le plus utilisé (hors pronoms)
 mots_non_pronoms = [mot for mot in occurrences_mots if
-                    mot not in ["je", "tu", "il", "elle", "nous", "vous", "ils", "elles",
+                    mot not in ["je", "tu", "il", "elle", "on", "nous", "vous", "ils", "elles",
                                 "me", "te", "se", "nous", "vous", "le", "la", "les", "lui", "leur",
-                                "moi", "toi", "soi", "nous", "vous", "eux", "elles"]]
+                                "moi", "toi", "soi", "nous", "vous", "eux", "elles",
+                                "ce", "cet", "cette", "ces",
+                                "le mien", "la mienne", "les miens", "les miennes",
+                                "le tien", "la tienne", "les tiens", "les tiennes",
+                                "le sien", "la sienne", "les siens", "les siennes",
+                                "le nôtre", "la nôtre", "les nôtres",
+                                "le vôtre", "la vôtre", "les vôtres",
+                                "le leur", "la leur", "les leurs",
+                                "celui", "celle", "ceux", "celles",
+                                "qui", "que", "quoi", "dont", "où",
+                                "quel", "quelle", "quels", "quelles",
+                                "quelque chose", "quelqu'un",
+                                "rien", "personne",
+                                "tout", "tous", "toute", "toutes",
+                                "chacun", "chacune",
+                                "plusieurs",
+                                "certains", "certaines"]]
 mot_max_occurrence_non_pronoms = max(mots_non_pronoms, key=occurrences_mots.get)
 print("Mot le plus utilisé (hors pronoms) dans le texte:", mot_max_occurrence_non_pronoms)
