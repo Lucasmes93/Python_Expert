@@ -65,7 +65,7 @@ print("\nTexte sans 'e':\n", texte_sans_e)
 # Compter les occurrences de chaque mot
 occurrences_mots = Counter(texte_source.lower().split())
 
-chemin_dossier = r"C:\Users\Luxur\Desktop\Python_Expert"
+chemin_dossier = r"D:\ESTIAM\E4\Python\Python_Expert"
 chemin_fichier_json = os.path.join(chemin_dossier, "fichiers.json")
 
 # Vérifier si le dossier existe, sinon le créer

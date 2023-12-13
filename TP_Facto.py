@@ -72,7 +72,7 @@ print("\nTexte sans '{}':\n".format(lettre_modifiee), texte_sans_lettre)
 # Compter les occurrences de chaque mot
 occurrences_mots = Counter(texte_source.lower().split())
 
-chemin_dossier = r"C:\Users\MESSIA\Desktop\ESTIAM\E4\Python_Expert"
+chemin_dossier = r"D:\ESTIAM\E4\Python\Python_Expert"
 nom_fichier_json = "fichiers.json"
 chemin_fichier_json = os.path.join(chemin_dossier, nom_fichier_json)
 
