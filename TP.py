@@ -65,7 +65,7 @@ print("\nTexte sans 'e':\n", texte_sans_e)
 # Compter les occurrences de chaque mot
 occurrences_mots = Counter(texte_source.lower().split())
 
-chemin_dossier = r"C:\Users\MESSIA\Desktop\ESTIAM\E4\Python_Expert"
+chemin_dossier = r"C:\Users\Luxur\Desktop\Python_Expert"
 chemin_fichier_json = os.path.join(chemin_dossier, "fichiers.json")
 
 # Vérifier si le dossier existe, sinon le créer
@@ -128,3 +128,10 @@ mots_non_pronoms = [mot for mot in occurrences_mots if
                                 "m'", "t'", "s'", "l'", "y", "en"]]
 mot_max_occurrence_non_pronoms = max(mots_non_pronoms, key=occurrences_mots.get)
 print("Mot le plus utilisé (hors pronoms) dans le texte:", mot_max_occurrence_non_pronoms)
+
+# Partie 5 - Couple de 2 elements
+elems = ['a', 'b', 'c', 'a', 'b', 'a', 'd', 'e']
+
+#Créer des couples de deux valeurs
+couples = [(elems[i], elems[i+1]) for i in range(0, len(elems)-1, 2)]
+print(f"Voici les couples de 2 elements :{couples} de la liste d'element suiviant : {elems} ")
